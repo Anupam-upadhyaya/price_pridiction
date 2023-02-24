@@ -1,4 +1,5 @@
 import 'package:pricepredictor/physicalcondition.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 import 'flutterflow/flutter_flow_drop_down.dart';
 import 'flutterflow/flutter_flow_theme.dart';
@@ -47,7 +48,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                 lineHeight: 2.0,
               ),
         ),
-        actions: [],
+        actions: const [],
         centerTitle: false,
         elevation: 0,
       ),
@@ -103,7 +104,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                               height: 120,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4,
                                     color: Color(0x1F000000),
@@ -160,7 +161,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                               height: 140,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4,
                                     color: Color(0x1F000000),
@@ -213,7 +214,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                               height: 140,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4,
                                     color: Color(0x1F000000),
@@ -266,7 +267,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                               height: 140,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4,
                                     color: Color(0x1F000000),
@@ -319,7 +320,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                               height: 140,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4,
                                     color: Color(0x1F000000),
@@ -372,7 +373,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                               height: 140,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4,
                                     color: Color(0x1F000000),
@@ -425,7 +426,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                               height: 140,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4,
                                     color: Color(0x1F000000),
@@ -478,7 +479,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                               height: 140,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4,
                                     color: Color(0x1F000000),
@@ -551,7 +552,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 4,
                         color: Color(0x1F000000),
@@ -586,7 +587,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
-                          children: [],
+                          children: const [],
                         ),
                       ],
                     ),
@@ -599,7 +600,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 4,
                         color: Color(0x1F000000),
@@ -616,7 +617,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 4,
                         color: Color(0x1F000000),
@@ -651,7 +652,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
-                          children: [],
+                          children: const [],
                         ),
                       ],
                     ),
@@ -664,7 +665,7 @@ class _AppleWidgetState extends State<AppleWidget> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 4,
                         color: Color(0x1F000000),
@@ -700,12 +701,16 @@ class _AppleWidgetState extends State<AppleWidget> {
                         Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                            FlutterFlowDropDown<String>(
-                              options: ['1st hand', '2nd hand'],
+                            FlutterFlowDropDown(
+                              initialOption: '1st hand',
+                              hintText: 'Please select...',
+                              options: const ['1st hand', '2nd hand'],
                               onChanged: (val) =>
                                   setState(() => dropDownValue = val),
+                              //icon: Icons.abc_rounded ,
                               width: 180,
                               height: 50,
+                              fillColor: Colors.white,
                               textStyle: FlutterFlowTheme.of(context)
                                   .bodyText1
                                   .override(
@@ -717,12 +722,12 @@ class _AppleWidgetState extends State<AppleWidget> {
                                     fontWeight: FontWeight.normal,
                                     lineHeight: 2.0,
                                   ),
-                              hintText: 'Please select...',
-                              fillColor: Colors.white,
+
                               elevation: 2,
-                              borderColor: Colors.transparent,
                               borderWidth: 0,
+
                               borderRadius: 0,
+                              borderColor: Colors.transparent,
                               margin:
                                   EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
                               hidesUnderline: true,
@@ -767,7 +772,14 @@ class _AppleWidgetState extends State<AppleWidget> {
                             borderSide: const BorderSide(
                               color: Colors.transparent,
                               width: 1,
-                            ), borderRadius: 12.0, disabledColor: Colors.blue, disabledTextColor: Colors.white, iconColor: Colors.green, iconPadding:, iconSize: 12, padding: EdgeInsets.symmetric(horizontal: 16.0), splashColor: Colors.green : ,
+                            ),
+                            borderRadius: 12.0,
+                            disabledColor: Colors.blue,
+                            disabledTextColor: Colors.white,
+                            iconColor: Colors.green,
+                            iconSize: 12,
+                            padding: EdgeInsets.symmetric(horizontal: 16.0),
+                            splashColor: Colors.green,
                             // borderRadius: BorderRadius.circular(2);
                           ),
                           icon: Icon(Icons.star),

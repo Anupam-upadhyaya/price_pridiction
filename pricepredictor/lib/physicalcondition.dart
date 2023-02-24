@@ -36,11 +36,11 @@ class _PhysicalconditioWidgetState extends State<PhysicalconditioWidget> {
                 fontFamily: 'Poppins',
                 // color: FlutterFlowTheme.of(context).primaryBtnText,
                 fontWeight: FontWeight.bold, color: Colors.black,
-                                    decoration: TextDecoration.none,
-                                    fontSize: 14,
-                                    fontStyle: FontStyle.italic,
-                                    
-                                    lineHeight: 2.0,
+                decoration: TextDecoration.none,
+                fontSize: 14,
+                fontStyle: FontStyle.italic,
+
+                lineHeight: 2.0,
               ),
         ),
         actions: [],
@@ -364,10 +364,12 @@ class _PhysicalconditioWidgetState extends State<PhysicalconditioWidget> {
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 35, 0, 0),
                   child: FFButtonWidget(
+                    text: 'continue',
                     onPressed: () {
                       print('Button pressed ...');
                     },
-                    text: 'continue',
+                    icon: Icon(Icons.search),
+                    iconData: Icons.abc_outlined,
                     options: FFButtonOptions(
                       width: 130,
                       height: 40,
@@ -376,14 +378,26 @@ class _PhysicalconditioWidgetState extends State<PhysicalconditioWidget> {
                           FlutterFlowTheme.of(context).subtitle2.override(
                                 fontFamily: 'Poppins',
                                 color: Colors.white,
+                                decoration: TextDecoration.none,
+                                fontSize: 14,
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.normal,
+                                lineHeight: 2.0,
                               ),
                       elevation: 20,
                       borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1,
-                      ),borderRadius: 12.0, disabledColor: Colors.blue, disabledTextColor: Colors.white, iconColor: Colors.green, iconPadding: , iconSize: 12, padding: EdgeInsets.symmetric(horizontal: 16.0), splashColor: Colors.green,
+                      ),
+                      borderRadius: 12.0,
+                      disabledColor: Colors.blue,
+                      disabledTextColor: Colors.white,
+                      iconColor: Colors.green,
+                      /*iconPadding: ,*/ iconSize: 12,
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      splashColor: Colors.green,
                       // borderRadius: BorderRadius.circular(8),
-                    ), icon: null, iconData: null, key: null,
+                    ), // icon: null, iconData: null, key: null,
                   ),
                 ),
               ),

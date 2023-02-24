@@ -15,7 +15,7 @@ class FFButtonOptions {
     required this.splashColor,
     required this.iconSize,
     required this.iconColor,
-    required this.iconPadding,
+    //required this.iconPadding,
     required this.borderRadius,
     required this.borderSide,
   });
@@ -31,14 +31,14 @@ class FFButtonOptions {
   final Color splashColor;
   final double iconSize;
   final Color iconColor;
-  final EdgeInsetsGeometry iconPadding;
+  //final EdgeInsetsGeometry iconPadding;
   final double borderRadius;
   final BorderSide borderSide;
 }
 
 class FFButtonWidget extends StatefulWidget {
   const FFButtonWidget({
-    required Key key,
+    Key? key,
     required this.text,
     required this.onPressed,
     required this.icon,
@@ -140,8 +140,8 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
       return Container(
         height: widget.options.height,
         width: widget.options.width,
-        child: ElevatedButton.icon(
-          icon: Padding(
+        // child: ElevatedButton.icon(
+        /*icon: Padding(
             padding: widget.options.iconPadding ?? EdgeInsets.zero,
             child: widget.icon ??
                 FaIcon(
@@ -150,11 +150,11 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
                   color: widget.options.iconColor ??
                       widget.options.textStyle.color,
                 ),
-          ),
-          label: textWidget,
-          onPressed: onPressed,
-          style: style,
-        ),
+          ),*/
+        //     label: textWidget,
+        //     onPressed: onPressed,
+        //     style: style,
+        //   ),
       );
     }
 

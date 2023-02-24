@@ -299,10 +299,12 @@ class _ButtonsWidgetState extends State<ButtonsWidget> {
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 2),
                   child: FFButtonWidget(
+                    text: 'continue',
                     onPressed: () {
                       print('Button pressed ...');
                     },
-                    text: 'continue',
+                    icon: Icon(Icons.search),
+                    iconData: Icons.abc_outlined,
                     options: FFButtonOptions(
                       width: 130,
                       height: 40,
@@ -321,9 +323,16 @@ class _ButtonsWidgetState extends State<ButtonsWidget> {
                       borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1,
-                      ), borderRadius: 12.0, disabledColor: Colors.blue, disabledTextColor: Colors.white, iconColor: Colors.green, iconPadding: , iconSize: 12, padding: EdgeInsets.symmetric(horizontal: 16.0), splashColor: Colors.green :,
-                      // borderRadius: BorderRadius.circular(8),
-                    ), icon: null, iconData: null, key: null,
+                      ),
+                      borderRadius: 12.0,
+                      disabledColor: Colors.blue,
+                      disabledTextColor: Colors.white,
+                      iconColor: Colors.green,
+                      /*iconPadding: ,*/ iconSize: 12,
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      splashColor: Colors.green,
+                      //borderRadius: BorderRadius.circular(8),
+                    ), //icon: null, iconData: null, key: null,
                   ),
                 ),
               ),

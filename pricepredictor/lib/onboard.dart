@@ -27,12 +27,14 @@ class _OnboardWidgetState extends State<OnboardWidget>
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Color(0xFF1E2429),
       body: Container(
-        width: double.infinity,
-        height: double.infinity,
+        width: screenWidth,
+        height: screenHeight,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [Color(0xFF4B39EF), Color(0xFFEE8B60)],
@@ -77,21 +79,24 @@ class _OnboardWidgetState extends State<OnboardWidget>
                         Align(
                           alignment: AlignmentDirectional(0.8, 0.96),
                           child: FFButtonWidget(
+                            text: 'start',
                             onPressed: () async {
                               Navigator.pushNamed(context, 'HomePage');
                               // context.pushNamed('HomePage');
                             },
-                            text: 'start',
+                            icon: Icon(Icons.search),
+                            iconData: Icons.abc_outlined,
                             options: FFButtonOptions(
                               height: 40,
-                              color: Color(0x728811CB),
+                              color: Color.fromARGB(255, 138, 0, 0),
                               textStyle: FlutterFlowTheme.of(context)
                                   .subtitle2
                                   .override(
                                     fontFamily: 'Poppins',
                                     // color: FlutterFlowTheme.of(context)
                                     //     .primaryBtnText,
-                                    fontWeight: FontWeight.w600, color: Colors.black,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.black,
                                     decoration: TextDecoration.none,
                                     fontSize: 14,
                                     fontStyle: FontStyle.italic,
@@ -100,9 +105,18 @@ class _OnboardWidgetState extends State<OnboardWidget>
                               borderSide: BorderSide(
                                 color: Colors.transparent,
                                 width: 1,
-                              ), borderRadius: 12.0, disabledColor: Colors.blue, disabledTextColor: Colors.white, iconColor: Colors.green, iconPadding: , iconSize: 12, padding: EdgeInsets.symmetric(horizontal: 16.0), splashColor: Colors.green, elevation: 12, width: 12 ,
+                              ),
+                              borderRadius: 12.0,
+                              disabledColor: Colors.blue,
+                              disabledTextColor: Colors.white,
+                              iconColor: Colors.green,
+                              /*iconPadding: , */ iconSize: 12,
+                              padding: EdgeInsets.symmetric(horizontal: 16.0),
+                              splashColor: Colors.green,
+                              elevation: 12,
+                              width: 12,
                               // borderRadius: BorderRadius.circular(100),
-                            ), icon: null, iconData: null, key: null,
+                            ), // icon: null, iconData: null, key: null,
                           ),
                         ),
                       ],

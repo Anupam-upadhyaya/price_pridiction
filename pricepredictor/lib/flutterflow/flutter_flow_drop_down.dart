@@ -7,7 +7,7 @@ class FlutterFlowDropDown extends StatefulWidget {
     required this.hintText,
     required this.options,
     required this.onChanged,
-    required this.icon,
+    //required this.icon,
     required this.width,
     required this.height,
     required this.fillColor,
@@ -24,7 +24,7 @@ class FlutterFlowDropDown extends StatefulWidget {
   final String hintText;
   final List<String> options;
   final Function(String) onChanged;
-  final Widget icon;
+  //final IconData icon;
   final double width;
   final double height;
   final Color fillColor;
@@ -73,7 +73,7 @@ class _FlutterFlowDropDownState extends State<FlutterFlowDropDown> {
         dropDownValue = value!;
         widget.onChanged(value);
       },
-      icon: widget.icon,
+      //icon: IconData,
       isExpanded: true,
       dropdownColor: widget.fillColor,
       focusColor: Colors.transparent,

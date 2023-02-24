@@ -72,12 +72,11 @@ class _ScrachDentsWidgetState extends State<ScrachDentsWidget> {
                     style: FlutterFlowTheme.of(context).bodyText2.override(
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.normal,
-                                    color: Colors.black,
-                                    decoration: TextDecoration.none,
-                                    fontSize: 14,
-                                    fontStyle: FontStyle.italic,
-                                    
-                                    lineHeight: 2.0,
+                          color: Colors.black,
+                          decoration: TextDecoration.none,
+                          fontSize: 14,
+                          fontStyle: FontStyle.italic,
+                          lineHeight: 2.0,
                         ),
                   ),
                 ),
@@ -353,10 +352,12 @@ class _ScrachDentsWidgetState extends State<ScrachDentsWidget> {
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 2),
                   child: FFButtonWidget(
+                    text: 'continue',
                     onPressed: () {
                       print('Button pressed ...');
                     },
-                    text: 'continue',
+                    icon: Icon(Icons.search),
+                    iconData: Icons.abc_outlined,
                     options: FFButtonOptions(
                       width: 130,
                       height: 40,
@@ -364,19 +365,25 @@ class _ScrachDentsWidgetState extends State<ScrachDentsWidget> {
                       textStyle:
                           FlutterFlowTheme.of(context).subtitle2.override(
                                 fontFamily: 'Poppins',
-                                color: Colors.white, 
-                                
-                                    decoration: TextDecoration.none,
-                                    fontSize: 14,
-                                    fontStyle: FontStyle.italic,
-                                    fontWeight: FontWeight.normal,
-                                    lineHeight: 2.0,
+                                color: Colors.white,
+                                decoration: TextDecoration.none,
+                                fontSize: 14,
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.normal,
+                                lineHeight: 2.0,
                               ),
                       elevation: 20,
                       borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1,
-                      ),borderRadius: 12.0, disabledColor: Colors.blue, disabledTextColor: Colors.white, iconColor: Colors.green, iconPadding: , iconSize: 12, padding: EdgeInsets.symmetric(horizontal: 16.0), splashColor: Colors.green,
+                      ),
+                      borderRadius: 12.0,
+                      disabledColor: Colors.blue,
+                      disabledTextColor: Colors.white,
+                      iconColor: Colors.green,
+                      /* iconPadding: ,*/ iconSize: 12,
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      splashColor: Colors.green,
                       // borderRadius: BorderRadius.circular(8),
                     ),
                   ),
